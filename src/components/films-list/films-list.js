@@ -1,29 +1,17 @@
-import "./films-list.css"
+import "./films-list.css";
 import FilmsListItem from "./films-list-item/films-list-item";
 
-const FilmsList = () => {
-    return (
-        <div className="filmsList">
-            <ul>
-                <li className="">
-                 <FilmsListItem />
-                </li>
+const FilmsList = ({ data, onDelete }) => {
+  const elements = data.map((item) => {
+    const {id, ...itemProps } = item;
+    return <FilmsListItem key={id} {...itemProps} onDelete = {() => onDelete(id)} />;
+  });
 
-                <li className="">
-                 <FilmsListItem />
-                </li>
-
-                <li className="">
-                 <FilmsListItem />
-                </li>
-
-                <li className="">
-                 <FilmsListItem />
-                </li>
-                
-            </ul>
-        </div>
-    )
-}
+  return (
+    <div className="filmsList">
+      <ul>{elements}</ul>
+    </div>
+  );
+};
 
 export default FilmsList;

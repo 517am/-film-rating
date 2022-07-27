@@ -6,7 +6,7 @@ const SearchPanel = () => {
         <input type="text" placeholder='Найти фильм' className='w-100'/>
         <button className='btn btn-danger'>Все фильмы</button>
         <button className='btn btn-danger'>Избранные</button>
-        <button className='btn btn-danger'>Оценка больше</button>
+        <button className='btn btn-danger'>Оценка больше 7</button>
     </div>
     )
 } 

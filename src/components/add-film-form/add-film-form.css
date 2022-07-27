@@ -12,6 +12,7 @@ form{
     display: flex;
     justify-content: left;
     align-items: baseline;
+    flex-wrap: wrap;
 }
 
 form input{
