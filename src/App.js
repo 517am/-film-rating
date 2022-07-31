@@ -12,9 +12,9 @@ class App extends Component {
 
     this.state = {
       data: [
-        { name: "сплит", grade: "3", id: 1, favorit: false },
-        { name: "джокер", grade: "10", id: 2, favorit: true },
-        { name: "грязь", grade: "7", id: 3, favorit: false },
+        { name: "Сплит", grade: "3", id: 1, favorit: false },
+        { name: "Джокер", grade: "10", id: 2, favorit: true },
+        { name: "Грязь", grade: "7", id: 3, favorit: false },
       ],
       searchInput: "",
       filter: "",

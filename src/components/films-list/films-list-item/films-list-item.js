@@ -4,9 +4,9 @@ const FilmsListItem = (props) => {
 
     const { name, grade, onDelete, onFavorit, favorit } = props;
 
-    let classNames = "q";
+    let classNames = "";
     if (favorit) {
-      classNames += " favorit";
+      classNames = "favorit";
     }
 
     return (
