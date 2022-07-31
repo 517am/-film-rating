@@ -1,27 +1,12 @@
-import { Component } from "react";
 import "./films-list-item.css";
 
-class FilmsListItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      favorit: false,
-    };
-  }
+const FilmsListItem = (props) => {
 
-  onFavorit = () => {
-    this.setState(({ favorit }) => ({
-      favorit: !favorit,
-    }));
-  };
+    const { name, grade, onDelete, onFavorit, favorit } = props;
 
-  render() {
-    const { name, grade, onDelete } = this.props;
-    const { favorit } = this.state;
-
-    let classNames = "";
+    let classNames = "q";
     if (favorit) {
-      classNames += "favorit";
+      classNames += " favorit";
     }
 
     return (
@@ -33,7 +18,7 @@ class FilmsListItem extends Component {
           <span>{grade}</span>/10
         </span>
         <div className="icons">
-          <span onClick={this.onFavorit} className={classNames}>
+          <span className={classNames} onClick={onFavorit}>
             <i class="fas fa-star"></i>
           </span>
           <span onClick={onDelete}>
@@ -42,7 +27,6 @@ class FilmsListItem extends Component {
         </div>
       </li>
     );
-  }
 }
 
 export default FilmsListItem;
